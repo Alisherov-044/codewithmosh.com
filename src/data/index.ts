@@ -1,6 +1,15 @@
-import { navbarLinks } from "./navLinks";
-import { socialLinks } from "./socialLinks";
-import { statistics } from "./Statistics";
+import { courses } from "./courses";
 import { features } from "./features";
+import { navbarLinks } from "./navLinks";
+import { statistics } from "./Statistics";
+import { socialLinks } from "./socialLinks";
+import { adminNavbarLinks } from "./adminNavLinks";
 
-export { navbarLinks, socialLinks, statistics, features };
+export {
+  courses,
+  features,
+  statistics,
+  socialLinks,
+  navbarLinks,
+  adminNavbarLinks,
+};

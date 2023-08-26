@@ -1,5 +1,10 @@
 import { Layout } from "@/layouts";
-import { AboutSection, FeaturesSection, HeroSection } from "./Home";
+import {
+  AboutSection,
+  CoursesSection,
+  FeaturesSection,
+  HeroSection,
+} from "./home";
 
 export default function Home() {
   return (
@@ -8,6 +13,7 @@ export default function Home() {
         <HeroSection />
         <AboutSection />
         <FeaturesSection />
+        <CoursesSection />
       </div>
     </Layout>
   );

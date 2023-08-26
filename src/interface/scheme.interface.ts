@@ -19,3 +19,15 @@ export interface FeatureCardScheme {
   image: string;
   color: string;
 }
+
+export interface CourseCardScheme {
+  id?: number;
+  name: string;
+  description: string;
+  image: string;
+  price: number;
+  forMonth?: boolean;
+  discount?: number;
+  link: string;
+  duration: string;
+}

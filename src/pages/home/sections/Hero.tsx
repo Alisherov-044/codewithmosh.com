@@ -1,10 +1,11 @@
 import Link from "next/link";
 import Image from "next/image";
+import { Section } from "@/layouts";
 import { ArrowRightIcon } from "@/icons";
 
 export function HeroSection() {
   return (
-    <section className="pt-10 pb-12 relative">
+    <Section className="pt-10 pb-12 relative">
       <Image
         className="absolute -top-28 -z-10"
         src="/bg-grid-lighter.svg"
@@ -120,6 +121,6 @@ export function HeroSection() {
           </div>
         </div>
       </div>
-    </section>
+    </Section>
   );
 }
