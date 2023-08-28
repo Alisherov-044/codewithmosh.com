@@ -1,8 +1,10 @@
-import { statistics } from "@/data";
 import { StatisticsCard } from "@/components";
 import { Section, SectionTitle } from "@/layouts";
+import { useStatisticsContext } from "@/context";
 
 export function AboutSection() {
+  const { statistics } = useStatisticsContext();
+
   return (
     <Section className="container">
       <div className="flex flex-col mb-10 my-5">

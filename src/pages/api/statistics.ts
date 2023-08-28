@@ -2,15 +2,23 @@ import { prisma } from "@/lib";
 import type { NextApiRequest, NextApiResponse } from "next";
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
-  const data = req.body;
-
   if (req.method === "GET") {
-    const statistics = await prisma.statistics.findMany();
-    res.status(200).json(statistics);
+    try {
+      const statistics = await prisma.statistics.findMany();
+      res.status(200).json(statistics);
+    } catch (error: any) {
+      console.log(error.message);
+    }
   }
 
   if (req.method === "POST") {
-    const statistic = await prisma.statistics.create({ data });
-    res.status(201).json(statistic);
+    const data = req.body;
+
+    try {
+      const statistic = await prisma.statistics.create({ data });
+      res.status(201).json(statistic);
+    } catch (error: any) {
+      console.log(error.message);
+    }
   }
 };

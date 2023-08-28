@@ -5,6 +5,7 @@ import { Input } from "./form/Input";
 import { Textarea } from "./form/Textarea";
 import { Form } from "./form/Form";
 import { Button } from "./ui/Button";
+import { Modal } from "./ui/Modal";
 
 export {
   StatisticsCard,
@@ -14,4 +15,5 @@ export {
   Textarea,
   Form,
   Button,
+  Modal,
 };

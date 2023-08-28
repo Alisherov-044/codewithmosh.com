@@ -9,6 +9,12 @@ import { TextareaInterface } from "./components.interface";
 import { FormInterface } from "./components.interface";
 import { ButtonInterface } from "./components.interface";
 import { ApiStateInterface } from "./hooks.interface";
+import { LoadingContextInterface } from "./context.interface";
+import { LoadingProviderInterface } from "./context.interface";
+import { LoadingWrapperInterface } from "./layouts.interface";
+import { ModalInterface } from "./components.interface";
+import { StatisticsContextInterface } from "./context.interface";
+import { StatisticsProviderInterface } from "./context.interface";
 
 export type {
   LayoutInterface,
@@ -22,4 +28,10 @@ export type {
   FormInterface,
   ButtonInterface,
   ApiStateInterface,
+  LoadingContextInterface,
+  LoadingProviderInterface,
+  LoadingWrapperInterface,
+  ModalInterface,
+  StatisticsContextInterface,
+  StatisticsProviderInterface,
 };

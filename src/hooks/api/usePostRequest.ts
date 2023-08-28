@@ -1,32 +1,28 @@
-import { useState } from "react";
 import { useSWRConfig } from "swr";
 import { fetcher } from "@/utils";
-import { ApiStateInterface } from "@/interface";
+import { useState } from "react";
 
 export function usePostRequest<T>() {
   const { mutate } = useSWRConfig();
-  const [api, setApi] = useState<ApiStateInterface<T>>({
-    isLoading: false,
-    response: undefined,
-    error: undefined,
-  });
+  const [isLoading, setIsLoading] = useState<boolean>(false);
 
-  const postRequest = (url: string, data: {}) => {
-    const { isLoading, response, error } = api;
-
-    mutate<T>(
+  const postRequest = async (url: string, data: T) => {
+    await setIsLoading(true);
+    const response = await mutate<T>(
       url,
       fetcher(url, {
         method: "POST",
         headers: { "Content-type": "application/json" },
         body: JSON.stringify(data),
       })
-    )
-      .then((response) => setApi({ ...api, isLoading: true, response }))
-      .catch((error) => setApi({ ...api, error: error }))
-      .finally(() => setApi({ ...api, isLoading: false }));
+    );
+    await setIsLoading(false);
 
-    return { isLoading, response, error };
+    return {
+      response,
+      success: !!response,
+      isLoading,
+    };
   };
 
   return { postRequest };

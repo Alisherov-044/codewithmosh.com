@@ -10,16 +10,9 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model StatisticsColor {
-  id         Int          @id @default(autoincrement())
-  via        String
-  text       String
-  statistics Statistics[]
-}
-
 model Statistics {
-  id          Int             @id @default(autoincrement())
+  id          Int    @id @default(autoincrement())
   title       String
   description String
-  color       StatisticsColor @relation(fields: [id], references: [id])
+  color       String
 }

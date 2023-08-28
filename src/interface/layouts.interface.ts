@@ -14,3 +14,8 @@ export interface SectionTitleInterface {
   title: string;
   description?: string;
 }
+
+export interface LoadingWrapperInterface {
+  loading: boolean;
+  children: ReactNode;
+}

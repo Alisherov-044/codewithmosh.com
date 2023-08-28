@@ -42,3 +42,9 @@ export interface ButtonInterface extends ComponentProps<"button"> {
   variant?: "primary" | "secondary";
   link?: string;
 }
+
+export interface ModalInterface {
+  children: ReactNode;
+  open: boolean;
+  onClose: () => void;
+}

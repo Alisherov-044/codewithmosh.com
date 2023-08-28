@@ -4,10 +4,7 @@ export interface StatisticsCardScheme {
   id?: number;
   title: string;
   description: string;
-  color: {
-    via: string;
-    text: string;
-  };
+  color: string;
 }
 
 export interface FeatureCardScheme {
