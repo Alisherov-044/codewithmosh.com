@@ -6,6 +6,7 @@ import { Textarea } from "./form/Textarea";
 import { Form } from "./form/Form";
 import { Button } from "./ui/Button";
 import { Modal } from "./ui/Modal";
+import { Message } from "./ui/Message";
 
 export {
   StatisticsCard,
@@ -16,4 +17,5 @@ export {
   Form,
   Button,
   Modal,
+  Message,
 };

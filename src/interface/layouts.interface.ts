@@ -13,6 +13,7 @@ export interface SectionTitleInterface {
   subTitle: string;
   title: string;
   description?: string;
+  className?: string;
 }
 
 export interface LoadingWrapperInterface {

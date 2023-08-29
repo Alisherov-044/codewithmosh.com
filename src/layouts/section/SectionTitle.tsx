@@ -4,9 +4,10 @@ export function SectionTitle({
   subTitle,
   title,
   description,
+  className,
 }: SectionTitleInterface) {
   return (
-    <div className="flex flex-col items-center my-12 mb-6 text-center">
+    <div className={`flex flex-col items-center mb-6 text-center ${className}`}>
       <p className="font-medium my-4 text-violet-500 dark:text-violet-75 text-sm tracking-widest uppercase">
         {subTitle}
       </p>

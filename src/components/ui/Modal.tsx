@@ -11,7 +11,7 @@ export function Modal({ children, open, onClose }: ModalInterface) {
       onClick={onClose}
     >
       <div
-        className="flex flex-col px-6 max-w-full min-h-[65%] bg-[#161534] rounded-md"
+        className="flex flex-col p-6 bg-[#161534] rounded-md"
         onClick={(e) => e.stopPropagation()}
       >
         {children}

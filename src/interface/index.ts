@@ -15,6 +15,8 @@ import { LoadingWrapperInterface } from "./layouts.interface";
 import { ModalInterface } from "./components.interface";
 import { StatisticsContextInterface } from "./context.interface";
 import { StatisticsProviderInterface } from "./context.interface";
+import { MessageInterface } from "./components.interface";
+import { ActionsInterface } from "./scheme.interface";
 
 export type {
   LayoutInterface,
@@ -34,4 +36,6 @@ export type {
   ModalInterface,
   StatisticsContextInterface,
   StatisticsProviderInterface,
+  MessageInterface,
+  ActionsInterface,
 };

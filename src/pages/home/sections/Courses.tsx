@@ -11,6 +11,7 @@ export function CoursesSection() {
           subTitle="Top-selling Courses"
           title="Level Up Your Coding Skills"
           description="Whether you're looking to switch to a career in tech or to advance in your current role, my courses give you the knowledge and experience you need to succeed."
+          className="my-12"
         />
         <div className="flex flex-col items-center">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">

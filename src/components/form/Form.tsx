@@ -1,5 +1,5 @@
 import { FormInterface } from "@/interface";
 
-export function Form({ onSubmit, children }: FormInterface) {
+export function Form({ children, onSubmit }: FormInterface) {
   return <form onSubmit={onSubmit}>{children}</form>;
 }

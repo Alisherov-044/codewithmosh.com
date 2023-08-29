@@ -48,3 +48,9 @@ export interface ModalInterface {
   open: boolean;
   onClose: () => void;
 }
+
+export interface MessageInterface {
+  message?: string;
+  variant: "success" | "warning" | "error";
+  isActive: boolean;
+}

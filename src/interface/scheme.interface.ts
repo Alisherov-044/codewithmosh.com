@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 
 export interface StatisticsCardScheme {
-  id?: number;
+  id: number;
   title: string;
   description: string;
   color: string;
@@ -27,4 +27,9 @@ export interface CourseCardScheme {
   discount?: number;
   link: string;
   duration: string;
+}
+
+export interface ActionsInterface<T> {
+  onDelete: (id: number) => void;
+  onEdit: (data: T) => void;
 }

@@ -13,7 +13,11 @@ export function FeaturesSection() {
         </div>
       </div>
       <div className="flex flex-col mb-10 my-5">
-        <SectionTitle subTitle="Features" title="Why Code with Mosh?" />
+        <SectionTitle
+          subTitle="Features"
+          title="Why Code with Mosh?"
+          className="my-12"
+        />
         <div className="container">
           {features.map((feature, index) => (
             <FeatureCard feature={feature} index={index} key={index} />

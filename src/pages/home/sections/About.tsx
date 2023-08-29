@@ -12,6 +12,7 @@ export function AboutSection() {
           subTitle="Hello,"
           title="I'm Mosh Hamedani."
           description="Are you feeling stuck or overwhelmed in your coding journey? Don't worry, I've got your back! Together, we'll work to level up your skills, increase your earning potential, and build a brighter future."
+          className="my-12"
         />
         <div className="flex flex-col items-center">
           <div className="max-w-[725px] mx-auto px-3 w-full">
