@@ -16,7 +16,8 @@ export function FeatureCard({
 
   return (
     <div
-      className={`grid grid-cols-4 grid-rows-2 items-center w-full px-6 pb-2 border-[1px] border-blue-950 rounded-sm text-[${color}]`}
+      style={{ color }}
+      className={`grid grid-cols-4 grid-rows-2 items-center w-full px-6 pb-2 border-[1px] border-blue-950 rounded-sm`}
     >
       <span title="id">{id}</span>
       <span
@@ -32,7 +33,7 @@ export function FeatureCard({
       <p title="description" className="text-sm">
         {description}
       </p>
-      <div className="">
+      <div>
         <Image src={image} width={200} height={200} alt="feature image" />
       </div>
       <div

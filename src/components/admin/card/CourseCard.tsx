@@ -34,7 +34,7 @@ export function CourseCard({
       <span title="link">{link}</span>
       <span title="price">{price}</span>
       <span title="duration">{duration}</span>
-      <div className="">
+      <div>
         <Image src={image} width={200} height={200} alt="course image" />
       </div>
       <div

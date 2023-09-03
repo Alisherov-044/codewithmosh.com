@@ -11,7 +11,8 @@ export function StatisticsCard({
 
   return (
     <div
-      className={`grid grid-cols-5 items-center w-full h-[70px] px-6 border-[1px] border-blue-950 rounded-sm text-[${color}]`}
+      style={{ color }}
+      className={`grid grid-cols-5 items-center w-full h-[70px] px-6 border-[1px] border-blue-950 rounded-sm`}
     >
       <p title="id">{id}</p>
       <p title="title">{title}</p>
