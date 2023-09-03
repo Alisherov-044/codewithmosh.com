@@ -13,3 +13,27 @@ export const linkValidation = {
 export const colorValidation = {
   required: "Please enter the color",
 };
+
+export const slugValidation = {
+  required: "Please enter the slug",
+};
+
+export const iconValidation = {
+  required: "Please enter the icon",
+};
+
+export const imageValidation = {
+  required: "Please enter the image",
+};
+
+export const nameValidation = {
+  required: "Please enter the name",
+};
+
+export const priceValidation = {
+  required: "Please enter the price",
+};
+
+export const durationValidation = {
+  required: "Please enter the duration time",
+};

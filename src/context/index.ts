@@ -1,4 +1,11 @@
 import { useLoadingContext } from "./loadingContext";
+import { useCoursesContext } from "./coursesContext";
+import { useFeaturesContext } from "./featuresContext";
 import { useStatisticsContext } from "./statisticsContext";
 
-export { useLoadingContext, useStatisticsContext };
+export {
+  useLoadingContext,
+  useCoursesContext,
+  useStatisticsContext,
+  useFeaturesContext,
+};

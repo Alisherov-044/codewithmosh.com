@@ -16,3 +16,25 @@ model Statistics {
   description String
   color       String
 }
+
+model Features {
+  id          Int    @id @default(autoincrement())
+  title       String
+  slug        String
+  description String
+  color       String
+  image       String
+  icon        String
+}
+
+model Courses {
+  id          Int     @id @default(autoincrement())
+  name        String
+  description String
+  image       String
+  price       Int
+  forMonth    Boolean
+  discount    Int?
+  link        String
+  duration    String
+}

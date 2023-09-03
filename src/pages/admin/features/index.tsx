@@ -1,4 +1,3 @@
-import { Layout, Section, SectionTitle } from "@/layouts";
 import {
   Button,
   Confirm,
@@ -9,61 +8,62 @@ import {
   Modal,
   Textarea,
 } from "@/components";
+import { Layout, Section, SectionTitle } from "@/layouts";
+import { useFeatures } from "../hooks";
+import { useFeaturesContext } from "@/context";
+import { FeatureCard } from "../components";
 import {
   colorValidation,
   descriptionValidation,
+  iconValidation,
+  imageValidation,
+  slugValidation,
   titleValidation,
 } from "@/utils/validations";
-import { StatisticsCard } from "@/pages/admin/components";
-import { useStatisticsContext } from "@/context";
-import { useStatistics } from "../hooks";
 
-export default function StatisticsAdmin() {
-  const { statistics } = useStatisticsContext();
+export default function FeaturesAdmin() {
+  const { features } = useFeaturesContext();
   const {
     modal: { isModalOpen, onModalOpen, onModalClose },
     confirm: { isConfirmOpen, onConfirmOpen, onConfirmClose, onConfirm },
     form: { handleSubmit, onSubmit, onEdit, isLoading, register },
     message: { isActive, message, variant },
-  } = useStatistics();
+  } = useFeatures();
 
   return (
     <Layout>
       <Section className="flex flex-col h-full 2xl:max-w-7xl mx-auto px-3 lg:px-6 py-3">
         <Message isActive={isActive} variant={variant} message={message} />
         <SectionTitle
-          subTitle="statistics"
-          title="All Statistics"
+          subTitle="features"
+          title="All Features"
           className="my-12"
         />
         <Confirm
-          title="Are you sure to delete this Statistic?"
+          title="Are you sure to delete this Feature?"
           open={isConfirmOpen}
           onClose={onConfirmClose}
           onConfirm={onConfirm}
         />
         <Button className="mb-6 w-fit" onClick={onModalOpen}>
-          Add new Statistics
+          Add new Feature
         </Button>
         <div className="relative w-full flex-auto">
-          <Empty
-            isEmpty={!statistics.length}
-            title="There is no statistics yet!"
-          >
+          <Empty isEmpty={!features.length} title="There is no features yet!">
             <div className="grid gap-6">
-              {statistics.map((statistic) => (
-                <StatisticsCard
-                  statistic={statistic}
+              {features.map((feature) => (
+                <FeatureCard
+                  feature={feature}
                   onDelete={onConfirmOpen}
                   onEdit={onEdit}
-                  key={statistic.id}
+                  key={feature.id}
                 />
               ))}
             </div>
           </Empty>
         </div>
         <Modal open={isModalOpen} onClose={onModalClose}>
-          <SectionTitle subTitle="statistics" title="Add New Statistics" />
+          <SectionTitle subTitle="features" title="Add New Features" />
           <Form onSubmit={handleSubmit(onSubmit)}>
             <div className="flex items-start justify-between flex-wrap gap-10">
               <Input
@@ -73,6 +73,18 @@ export default function StatisticsAdmin() {
               <Input
                 placeholder="color"
                 register={register("color", { ...colorValidation })}
+              />
+              <Input
+                placeholder="slug"
+                register={register("slug", { ...slugValidation })}
+              />
+              <Input
+                placeholder="image"
+                register={register("image", { ...imageValidation })}
+              />
+              <Textarea
+                placeholder="icon"
+                register={register("icon", { ...iconValidation })}
               />
               <Textarea
                 placeholder="description"

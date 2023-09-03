@@ -10,7 +10,7 @@ export function Input({
   return (
     <input
       type={type}
-      className={`border-[1px] border-blue-950 p-3 w-[45%] rounded-sm bg-transparent text-violet-500 outline-none placeholder:text-violet-500 ${className}`}
+      className={`border-[1px] appearance-none border-blue-950 p-3 w-[45%] rounded-sm bg-transparent text-violet-500 outline-none placeholder:text-violet-500 ${className}`}
       placeholder={placeholder}
       onChange={onChange}
       {...register}

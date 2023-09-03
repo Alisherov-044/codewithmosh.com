@@ -18,7 +18,7 @@ export function Layout({ children }: LayoutInterface) {
   return (
     <div id="root" className={inter.className}>
       <Header />
-      <main className="main">
+      <main className="main flex-auto">
         <LoadingWrapper loading={isLoading}>{children}</LoadingWrapper>
       </main>
       <Footer />

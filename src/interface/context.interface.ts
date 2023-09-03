@@ -1,5 +1,9 @@
 import { ReactNode } from "react";
-import { StatisticsCardScheme } from "./scheme.interface";
+import {
+  CourseCardScheme,
+  FeatureCardScheme,
+  StatisticsCardScheme,
+} from "./scheme.interface";
 
 export interface ProviderInterface {
   children: ReactNode;
@@ -17,3 +21,15 @@ export interface StatisticsContextInterface {
 }
 
 export interface StatisticsProviderInterface extends ProviderInterface {}
+
+export interface FeaturesContextInterface {
+  features: FeatureCardScheme[] | [];
+}
+
+export interface FeaturesProviderInterface extends ProviderInterface {}
+
+export interface CoursesContextInterface {
+  courses: CourseCardScheme[] | [];
+}
+
+export interface CoursesProviderInterface extends ProviderInterface {}

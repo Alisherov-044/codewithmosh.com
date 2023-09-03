@@ -32,7 +32,7 @@ export function Message({ message, variant, isActive }: MessageInterface) {
   return (
     <div
       className={`fixed left-1/2 -translate-x-1/2 flex items-center gap-4 px-6 w-[400px] h-[60px] rounded-[4px] transition-all duration-200 ${bg} ${
-        isActive ? "opacity-100 top-2" : "opacity-0 -z-50 -top-full"
+        isActive ? "opacity-100 top-2 z-50" : "opacity-0 -z-50 -top-full"
       }`}
     >
       <div className="max-w-[22px] max-h-[22px]">{icon}</div>

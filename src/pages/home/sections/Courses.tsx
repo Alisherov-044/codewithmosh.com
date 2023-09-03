@@ -1,9 +1,11 @@
 import Link from "next/link";
-import { courses } from "@/data";
 import { Button, CourseCard } from "@/components";
 import { Section, SectionTitle } from "@/layouts";
+import { useCoursesContext } from "@/context";
 
 export function CoursesSection() {
+  const { courses } = useCoursesContext();
+
   return (
     <Section className="container">
       <div className="flex flex-col mb-10 my-5">

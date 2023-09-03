@@ -1,4 +1,6 @@
-export const adminNavbarLinks = [
+import { NavbarLinksInterface } from "@/interface";
+
+export const adminNavbarLinks: NavbarLinksInterface[] = [
   {
     id: 1,
     text: "Dashboard",
@@ -6,11 +8,16 @@ export const adminNavbarLinks = [
   },
   {
     id: 2,
+    text: "Features",
+    link: "/admin/features",
+  },
+  {
+    id: 3,
     text: "Courses",
     link: "/admin/courses",
   },
   {
-    id: 3,
+    id: 4,
     text: "Statistics",
     link: "/admin/statistics",
   },

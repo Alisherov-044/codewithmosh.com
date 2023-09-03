@@ -1,4 +1,6 @@
-export const navbarLinks = [
+import { NavbarLinksInterface } from "@/interface";
+
+export const navbarLinks: NavbarLinksInterface[] = [
   {
     id: 1,
     text: "Subscribe",

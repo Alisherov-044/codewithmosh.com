@@ -1,4 +1,5 @@
 import Image from "next/image";
+import parse from "html-react-parser";
 import { FeatureCardInterface } from "@/interface";
 
 export function FeatureCard({ feature, index }: FeatureCardInterface) {
@@ -8,10 +9,11 @@ export function FeatureCard({ feature, index }: FeatureCardInterface) {
     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-10">
       <div className="md:mx-4">
         <div className="grid place-items-center w-12 h-12 rounded-full my-3 bg-[#181737]">
-          <div className={`${color}`}>{icon}</div>
+          <div style={{ color }}>{parse(icon)}</div>
         </div>
         <span
-          className={`${color} mb-3 inline-block font-medium md:font-semibold`}
+          style={{ color }}
+          className={`mb-3 inline-block font-medium md:font-semibold`}
         >
           {slug}
         </span>

@@ -31,7 +31,7 @@ export function CourseCard({ course }: CourseCardInterface) {
       <div className="p-6">
         <div className="flex items-center justify-between mb-4">
           <Link href={link}>
-            <h3 className="leading-4 font-bold text-xl transition-all hover:text-[#A679FF]">
+            <h3 className="leading-6 font-bold text-xl transition-all hover:text-[#A679FF]">
               {name}
             </h3>
           </Link>
@@ -41,7 +41,7 @@ export function CourseCard({ course }: CourseCardInterface) {
             </div>
           </div>
         </div>
-        <p className="text-base mb-3">{description}</p>
+        <p className="leading-5 mb-10">{description}</p>
         <p className="font-bold text-white absolute bottom-6 left-6">
           {formatCurrency(getAbsolutePrice(price, discount))}
           {forMonth ? "/m" : null}

@@ -4,8 +4,8 @@ import type { NextApiRequest, NextApiResponse } from "next";
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   if (req.method === "GET") {
     try {
-      const statistics = await prisma.statistics.findMany();
-      return res.status(200).json(statistics);
+      const features = await prisma.features.findMany();
+      return res.status(200).json(features);
     } catch (error: any) {
       console.log(error.message);
     }
@@ -15,24 +15,24 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     const data = req.body;
 
     try {
-      await prisma.statistics.create({ data });
-      const statistics = await prisma.statistics.findMany();
-      return res.status(201).json(statistics);
+      await prisma.features.create({ data });
+      const features = await prisma.features.findMany();
+      return res.status(201).json(features);
     } catch (error: any) {
       console.log(error.message);
     }
   }
 
   if (req.method === "PATCH") {
-    const { id, title, color, description } = req.body;
+    const { id, icon, slug, title, description, image, color } = req.body;
 
     try {
-      await prisma.statistics.update({
+      await prisma.features.update({
         where: { id },
-        data: { title, color, description },
+        data: { title, color, description, icon, slug, image },
       });
-      const statistics = await prisma.statistics.findMany();
-      return res.status(201).json(statistics);
+      const features = await prisma.features.findMany();
+      return res.status(201).json(features);
     } catch (error: any) {
       console.log(error.message);
     }
@@ -42,9 +42,9 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     const id = req.body;
 
     try {
-      await prisma.statistics.delete({ where: { id } });
-      const statistics = await prisma.statistics.findMany();
-      return res.status(200).json(statistics);
+      await prisma.features.delete({ where: { id } });
+      const features = await prisma.features.findMany();
+      return res.status(200).json(features);
     } catch (error: any) {
       console.log(error.message);
     }

@@ -1,8 +1,10 @@
-import { features } from "@/data";
 import { FeatureCard } from "@/components";
+import { useFeaturesContext } from "@/context";
 import { Section, SectionTitle } from "@/layouts";
 
 export function FeaturesSection() {
+  const { features } = useFeaturesContext();
+
   return (
     <Section className="relative overflow-hidden border-t-blue-950">
       <div className="absolute top-0 h-[1px] w-full bg-blue-950"></div>

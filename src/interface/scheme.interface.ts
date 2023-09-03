@@ -1,5 +1,3 @@
-import { ReactNode } from "react";
-
 export interface StatisticsCardScheme {
   id: number;
   title: string;
@@ -8,8 +6,8 @@ export interface StatisticsCardScheme {
 }
 
 export interface FeatureCardScheme {
-  id?: number;
-  icon: ReactNode;
+  id: number;
+  icon: string;
   slug: string;
   title: string;
   description: string;
@@ -18,7 +16,7 @@ export interface FeatureCardScheme {
 }
 
 export interface CourseCardScheme {
-  id?: number;
+  id: number;
   name: string;
   description: string;
   image: string;

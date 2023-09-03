@@ -24,7 +24,10 @@ export function StatisticsCard({
         {description}
       </p>
       <div title="actions" className="flex items-center justify-center gap-6">
-        <EditIcon className="w-[30px] h-[30px] fill-yellow-600 cursor-pointer" />
+        <EditIcon
+          className="w-[30px] h-[30px] fill-yellow-600 cursor-pointer"
+          onClick={() => onEdit(statistic)}
+        />
         <TrashIcon
           className="w-[20px] h-[20px] fill-red-600 cursor-pointer"
           onClick={() => onDelete(id)}
