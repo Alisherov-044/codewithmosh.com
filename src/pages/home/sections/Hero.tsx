@@ -60,27 +60,27 @@ export function HeroSection() {
                 </div>
                 <div>
                   <span className="text-white ml-8 mr-2">name:</span>
-                  <span className="text-gray-400">'</span>
+                  <span className="text-gray-400">{"'"}</span>
                   <span className="text-amber-300">Master Coder</span>
-                  <span className="text-gray-400">',</span>
+                  <span className="text-gray-400">{"',"}</span>
                 </div>
                 <div>
                   <span className="text-white ml-8 mr-2">skills:</span>
                   <span className="text-gray-400">{"['"}</span>
                   <span className="text-amber-300">React</span>
-                  <span className="text-gray-400">', '</span>
+                  <span className="text-gray-400">{"', '"}</span>
                   <span className="text-amber-300">Node</span>
                   <span className="text-gray-400">{"']"}</span>
                 </div>
                 <div>
                   <span className="text-white ml-8 mr-2">hardWorker:</span>
                   <span className="text-orange-400">true</span>
-                  <span className="text-gray-400">,</span>
+                  <span className="text-gray-400">{","}</span>
                 </div>
                 <div>
                   <span className="text-white ml-8 mr-2">problemSolver:</span>
                   <span className="text-orange-400">true</span>
-                  <span className="text-gray-400">,</span>
+                  <span className="text-gray-400">{","}</span>
                 </div>
                 <div>
                   <span className="text-green-400 ml-8 mr-2">hireable:</span>
