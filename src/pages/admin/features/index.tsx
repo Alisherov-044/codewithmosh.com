@@ -9,9 +9,9 @@ import {
   Textarea,
 } from "@/components";
 import { Layout, Section, SectionTitle } from "@/layouts";
-import { useFeatures } from "../hooks";
+import { useFeatures } from "@/hooks/admin";
 import { useFeaturesContext } from "@/context";
-import { FeatureCard } from "../components";
+import { FeatureCard } from "@/components/admin";
 import {
   colorValidation,
   descriptionValidation,

@@ -4,7 +4,7 @@ import {
   CoursesSection,
   FeaturesSection,
   HeroSection,
-} from "./home";
+} from "@/sections/home";
 
 export default function Home() {
   return (

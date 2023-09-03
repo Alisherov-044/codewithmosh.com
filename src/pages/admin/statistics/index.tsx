@@ -14,9 +14,9 @@ import {
   descriptionValidation,
   titleValidation,
 } from "@/utils/validations";
-import { StatisticsCard } from "@/pages/admin/components";
+import { StatisticsCard } from "@/components/admin";
 import { useStatisticsContext } from "@/context";
-import { useStatistics } from "../hooks";
+import { useStatistics } from "@/hooks/admin";
 
 export default function StatisticsAdmin() {
   const { statistics } = useStatisticsContext();

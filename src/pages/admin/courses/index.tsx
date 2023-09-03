@@ -1,4 +1,4 @@
-import { useCourses } from "../hooks";
+import { useCourses } from "@/hooks/admin";
 import { Layout, Section, SectionTitle } from "@/layouts";
 import { useCoursesContext } from "@/context";
 import {
@@ -20,7 +20,7 @@ import {
   nameValidation,
   priceValidation,
 } from "@/utils/validations";
-import { CourseCard } from "../components";
+import { CourseCard } from "@/components/admin";
 
 export default function CoursesAdmin() {
   const { courses } = useCoursesContext();
